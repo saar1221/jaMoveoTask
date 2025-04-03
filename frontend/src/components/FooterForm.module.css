@@ -1,0 +1,19 @@
+.footerForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.footerForm strong {
+  color: var(--primary-bg-color);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footerForm strong:hover {
+  text-decoration: underline;
+}

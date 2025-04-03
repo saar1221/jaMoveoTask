@@ -1,0 +1,11 @@
+.btn {
+  color: inherit;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+}
+
+.primary {
+  font-weight: 700;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+}
