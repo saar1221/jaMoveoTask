@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 const Live = ({ songId }) => {
-  const { user } = useAuth();
+  const { user } = useAuthContext();
   const { role } = user;
 
   console.log(role, "Live");
 
-  const navigate = useNavigate();
+  const navigate = useNavigate({ songId });
 
   const [autoScroll, setAutoScroll] = useState(false);
   const [song, setSong] = useState({

@@ -4,19 +4,23 @@ import apiRequest from "../../api/apiRequest";
 const AuthContext = createContext();
 
 const initialState = {
-  user: null,
+  user: JSON.parse(localStorage.getItem("user")) || null,
   isAuthenticated: false,
-  token: localStorage.getItem("token") || null, // need to test that
+  token: localStorage.getItem("token") || null,
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case "update-user": {
+    case "set-user": {
       const { token, user } = action.payload;
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("token", token);
       return { ...state, user, token, isAuthenticated: true };
     }
     case "logout":
-      return { ...initialState, token: null };
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      return { ...initialState };
     default:
       throw new Error("Unknown action");
   }
@@ -28,20 +32,19 @@ function AuthProvider({ children }) {
     initialState
   );
 
-  async function register({ username, password, instrument }) {
+  async function register({ username, password, instrument, role }) {
+    if (instrument === "") instrument = "none";
     const payload = {
       url: `/auth/signup`,
       method: "POST",
-      data: { username, password, instrument },
+      data: { username, password, instrument, role },
     };
     const { user, token } = await apiRequest(payload);
 
     dispatch({
-      type: "update-user",
+      type: "set-user",
       payload: { user, token },
     });
-
-    return true;
   }
 
   async function login({ username, password }) {
@@ -52,7 +55,7 @@ function AuthProvider({ children }) {
     });
 
     dispatch({
-      type: "update-user",
+      type: "set-user",
       payload: { user, token },
     });
   }
@@ -70,11 +73,11 @@ function AuthProvider({ children }) {
   );
 }
 
-function useAuth() {
+function useAuthContext() {
   const context = useContext(AuthContext);
   if (context === undefined)
     throw new Error("AuthContext was used outside AuthProvider");
   return context;
 }
 
-export { AuthProvider, useAuth };
+export { AuthProvider, useAuthContext };

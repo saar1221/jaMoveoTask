@@ -1,6 +1,6 @@
-import styles from "./Button.module.css";
+import styles from "../../style/Button.module.css";
 
-function Button({ children, onClick, type }) {
+export default function Button({ children, onClick, type }) {
   return (
     <button
       onClick={onClick}
@@ -10,5 +10,3 @@ function Button({ children, onClick, type }) {
     </button>
   );
 }
-
-export default Button;

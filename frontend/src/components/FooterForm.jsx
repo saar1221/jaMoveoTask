@@ -1,7 +1,7 @@
 import { Link } from "react-router";
-import styles from "./FooterForm.module.css";
+import styles from "../style/FooterForm.module.css";
 
-function FooterForm({ text, path }) {
+const FooterForm = ({ text, path }) => {
   return (
     <div className={styles.footerForm}>
       <p>
@@ -12,6 +12,6 @@ function FooterForm({ text, path }) {
       </p>
     </div>
   );
-}
+};
 
 export default FooterForm;

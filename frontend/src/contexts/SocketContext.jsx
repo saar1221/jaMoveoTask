@@ -1,52 +1,42 @@
 import React, { createContext, useEffect, useState, useContext } from "react";
-import { useAuth } from "./AuthContext";
+import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
 
 export const SocketContext = createContext();
 
 const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
-
   const [sessionActive, setSessionActive] = useState(false);
-
-  const [sessionData, setSessionData] = useState([null, null]);
-  const { user } = useAuth();
+  const { user } = useAuthContext();
 
   useEffect(() => {
-    if (user) {
-      const socket = io("http://localhost:5000/", {
-        query: {
-          userId: user._id,
-          role: user.role,
-        },
+    if (user && !socket) {
+      const socketInstance = io("http://localhost:4000", {
+        query: { userId: user._id, role: user.role },
       });
 
-      setSocket(socket);
+      socketInstance.on("connect", () => {
+        console.log("Connected to the socket server.");
+        setSocket(socketInstance);
+      });
 
-      socket.on("sessionStart", data => {
+      socketInstance.on("sessionStart", data => {
         setSessionActive(true);
-        setSessionData(data);
-        console.log("Admin initiated session: ", sessionData);
+        console.log("Session started:", data);
       });
 
-      socket.on("sessionEnd", () => {
+      socketInstance.on("sessionEnd", () => {
         setSessionActive(false);
-        setSessionData([null, null]);
       });
 
-      return () => socket.close();
-    } else {
-      if (socket) {
-        socket.close();
-        setSocket(null);
-      }
+      return () => {
+        if (socketInstance) socketInstance.close();
+      };
     }
   }, [user]);
 
   return (
-    <SocketContext.Provider
-      value={{ socket, sessionActive, setSessionActive, sessionData }}
-    >
+    <SocketContext.Provider value={{ socket, sessionActive, setSessionActive }}>
       {children}
     </SocketContext.Provider>
   );

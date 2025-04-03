@@ -3,18 +3,18 @@ import Results from "./Result";
 import apiRequest from "../../api/apiRequest";
 
 const Admin = () => {
-  const [query, setQuery] = useState("");
+  const [searchInput, setSearchInput] = useState("");
   const [songs, setSongs] = useState([]);
 
   const handleSearch = async e => {
     e.preventDefault();
 
-    if (query.trim()) {
+    if (searchInput.trim()) {
       try {
         const response = await apiRequest({
           method: "GET",
           url: "/songs/findSongs",
-          params: { query: encodeURIComponent(query) },
+          params: { query: encodeURIComponent(searchInput) },
         });
 
         setSongs(response.filteredSongs);
@@ -33,8 +33,8 @@ const Admin = () => {
         <input
           type="text"
           placeholder="Enter song name..."
-          value={query}
-          onChange={e => setQuery(e.target.value)}
+          value={searchInput}
+          onChange={e => setSearchInput(e.target.value)}
           className="flex-1 p-3 border border-gray-300 rounded-l-md text-black mr-2"
         />
         <button

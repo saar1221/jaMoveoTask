@@ -1,24 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { useSocketContext } from "../contexts/SocketContext";
+import { useSession } from "../hooks/useSession";
 
 function Results({ songs }) {
   const navigate = useNavigate();
-  const { socket } = useSocketContext();
+  const { startSession } = useSession();
 
-  function handlePlay(songId) {
-    console.log(`Playing song with ID: ${songId}`);
-
-    if (socket) {
-      socket.emit("songSelected", songId);
-    }
-
+  const handlePlay = songId => {
+    console.log(songId, "songId songIdsongIdsongId");
+    startSession(songId);
     navigate("/main/live");
-  }
+  };
 
   return (
     <div className="p-4">
-      <h3 className="text-2xl font-bold mb-4">Results</h3>
       {songs && songs.length > 0 ? (
         <ul className="space-y-4 max-h-[350px] overflow-y-auto">
           {songs.map((song, index) => (

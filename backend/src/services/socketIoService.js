@@ -1,60 +1,45 @@
-import { createServer } from "node:https";
-import { readFileSync } from "fs";
-import { Server } from "socket.io";
-import { resolve } from "path";
-
 let socketIoServiceContainer = null;
 
 class SocketIoService {
-  #connectedClients = new Map();
   #socketIoServer;
 
-  init(app) {
+  init(io) {
     try {
-      this.#initServer(app);
+      this.#socketIoServer = io;
+      console.log("start");
       this.#connectionSocketIo();
+      console.log("end");
     } catch (error) {
       console.error("Error initializing Socket.IO service:", error);
     }
   }
 
-  #initServer(app) {
-    const httpsServer = createServer(app);
-
-    this.#socketIoServer = new Server(httpsServer, {
-      cors: {
-        origin:
-          process.env.NODE_ENV === "production"
-            ? false
-            : ["https://localhost:5173"],
-      },
-    });
-
-    httpsServer.listen(process.env.SOCKET_PORT, () => {
-      console.log(
-        `Socket.IO server is running on https://localhost:${process.env.SOCKET_PORT}`
-      );
-    });
-  }
-
   #connectionSocketIo() {
     this.#socketIoServer.on("connection", socket => {
-      console.log("New client connected:", socket.id);
+      const { userId, role } = socket.handshake.query;
+      console.log("New client connected:", userId, role, socket.id);
 
-      socket.on("songSelected", songId => {
-        console.log("Song selected:", songId);
-        this.#broadcastSongSelection(songId);
+      socket.on("sessionStart", sessionId => {
+        if (role === "player") return;
+
+        console.log("Session start:", sessionId);
+        console.log("Session start:", userId, role);
+        this.#broadcastStartSession(sessionId);
       });
 
-      socket.on("join-room", (room, userName, cb) => {
-        console.log(`${userName} joined room: ${room}`);
-        socket.join(room);
-        cb();
+      socket.on("sessionEnd", sessionId => {
+        console.log("Session ended:", sessionId);
+        this.#broadcastSessionEnd(sessionId);
       });
+      // socket.on("join-room", (room, userName, cb) => {
+      //   console.log(`${userName} joined room: ${room}`);
+      //   socket.join(room);
+      //   cb();
+      // });
 
-      socket.on("message", data => {
-        this.#sendMessage(data, socket);
-      });
+      // socket.on("message", data => {
+      //   this.#sendMessage(data, socket);
+      // });
 
       socket.on("disconnect", () => {
         console.log("Client disconnected:", socket.id);
@@ -62,28 +47,23 @@ class SocketIoService {
     });
   }
 
-  #broadcastSongSelection(songId) {
-    this.#socketIoServer.emit("songSelected", songId);
+  #broadcastStartSession(sessionId) {
+    console.log(sessionId, "broadcastSongSelection");
+    this.#socketIoServer.emit("sessionStart", sessionId);
   }
 
-  #sendMessage(data, socket) {
-    if (data.room === "") {
-      socket.broadcast.emit("message", `#${data.userName}: ${data.message}`);
-    } else {
-      socket
-        .to(data.room)
-        .emit("message", `#${data.userName}: ${data.message}`);
-    }
+  #broadcastSessionEnd(sessionId) {
+    this.#socketIoServer.emit("sessionEnd", sessionId);
   }
 
-  // subscribe(socket, channel) {
-  //   console.log(`Socket ${socket.id} subscribed to ${channel}`);
-  //   socket.join(channel);
-  // }
-
-  // unsubscribe(socket, channel) {
-  //   console.log(`Socket ${socket.id} unsubscribed from ${channel}`);
-  //   socket.leave(channel);
+  // #sendMessage(data, socket) {
+  //   if (data.room === "") {
+  //     socket.broadcast.emit("message", `#${data.userName}: ${data.message}`);
+  //   } else {
+  //     socket
+  //       .to(data.room)
+  //       .emit("message", `#${data.userName}: ${data.message}`);
+  //   }
   // }
 }
 

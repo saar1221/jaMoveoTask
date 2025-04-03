@@ -1,19 +1,24 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
-function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
+function ProtectedRoute({ children, role }) {
+  const { token, user } = useAuthContext();
   const navigate = useNavigate();
 
   useEffect(
     function () {
-      if (!isAuthenticated) navigate("/");
+      // console.log("@@@@");
+      // if (!user || user?.role !== role) {
+      //   navigate(`/main/${user.role}`);
+      // }
+
+      if (!token) navigate("/");
     },
-    [isAuthenticated, navigate]
+    [token, navigate]
   );
 
-  return isAuthenticated ? children : null;
+  return token ? children : null;
 }
 
 export default ProtectedRoute;
