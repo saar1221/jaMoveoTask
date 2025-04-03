@@ -1,0 +1,16 @@
+.logo {
+  height: auto;
+  margin: 0 10px;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 197.5;
+  height: 54;
+  gap: 13.5px;
+}
