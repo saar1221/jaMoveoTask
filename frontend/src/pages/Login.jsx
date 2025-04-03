@@ -35,7 +35,6 @@ export default function Login() {
     try {
       await login({ username, password });
       localStorage.setItem("token", token);
-      console.log('"token", token', "token", token);
     } catch (err) {
       console.error(err.message);
     } finally {
