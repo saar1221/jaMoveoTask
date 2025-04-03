@@ -1,33 +1,23 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
 import Results from "./Result";
+import apiRequest from "../../api/apiRequest";
 
 const Admin = () => {
-  const [query, setQuery] = useState("");
-  const navigate = useNavigate();
-  const songs = [
-    { id: 1, title: "Hey Jude" },
-    { id: 2, title: "תפילות" },
-  ];
+  const [searchInput, setSearchInput] = useState("");
+  const [songs, setSongs] = useState([]);
+
   const handleSearch = async e => {
     e.preventDefault();
 
-    if (query.trim()) {
+    if (searchInput.trim()) {
       try {
-        // שליחת בקשה ל-backend
-        const response = await fetch(
-          `http://localhost:4000/api/songs?search=${encodeURIComponent(query)}`
-        );
-        if (response.ok) {
-          const data = await response.json(); // הנחה שהתגובה היא JSON
-          console.log(data);
+        const response = await apiRequest({
+          method: "GET",
+          url: "/songs/findSongs",
+          params: { query: encodeURIComponent(searchInput) },
+        });
 
-          navigate(`/admin-result?search=${encodeURIComponent(query)}`, {
-            state: { songs: data },
-          });
-        } else {
-          console.error("Error fetching songs:", response.statusText);
-        }
+        setSongs(response.filteredSongs);
       } catch (error) {
         console.error("Request failed:", error);
       }
@@ -35,21 +25,21 @@ const Admin = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-light-gold px-4">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
+    <div className="flex flex-col items-center justify-center h-screen bg-light-gold px-4 ">
+      <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
         Search any song...
-      </h1>
-      <form onSubmit={handleSearch} className="w-full max-w-md">
+      </h3>
+      <form onSubmit={handleSearch} className="w-full flex max-w-md">
         <input
           type="text"
           placeholder="Enter song name..."
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          className="w-full p-3 border border-gray-300 rounded-md text-black"
+          value={searchInput}
+          onChange={e => setSearchInput(e.target.value)}
+          className="flex-1 p-3 border border-gray-300 rounded-l-md text-black mr-2"
         />
         <button
           type="submit"
-          className="mt-4 w-full bg-blue-600 text-black py-2 rounded-md hover:bg-blue-700"
+          className="p-3 text-black rounded-r-md hover:bg-gray-800 transition"
         >
           Search
         </button>

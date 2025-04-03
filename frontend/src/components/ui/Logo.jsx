@@ -1,6 +1,6 @@
-import styles from "./Logo.module.css";
+import styles from "../../style/Logo.module.css";
 
-function Logo() {
+export default function Logo() {
   return (
     <div className={styles.logoContainer}>
       <img src="/logomark.svg" alt="logo" className={styles.logo} />
@@ -8,5 +8,3 @@ function Logo() {
     </div>
   );
 }
-
-export default Logo;

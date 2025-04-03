@@ -1,6 +1,4 @@
-import styles from "./Image.module.css";
-function Image({ name = "" }) {
+import styles from "../../style/Image.module.css";
+export default function Image({ name = "" }) {
   return <img className={styles.img} src={`/${name}.png`} alt="some-guys" />;
 }
-
-export default Image;

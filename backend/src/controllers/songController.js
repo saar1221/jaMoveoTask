@@ -1,40 +1,52 @@
-import Song from "../entities/Song.js";
+// import Song from "../models/Song.js";
+import songsDb from "../data/SongsDb.json" assert { type: "json" };
+import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
 
-export const searchSongs = async (req, res) => {
+export const searchSongsByName = async (req, res) => {
+  const { songName } = req.query;
+
+  if (!songName) {
+    return res.status(400).json({ error: "Missing songName or artist" });
+  }
+
+  songName;
   try {
-    const { query } = req.body;
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    const songFilePath = path.join(
+      __dirname,
+      "../data/songs",
+      songName + ".json"
+    );
 
-    const songs = await Song.find({
-      $or: [
-        { name: { $regex: query, $options: "i" } },
-        { artist: { $regex: query, $options: "i" } },
-      ],
-    });
+    console.log(songFilePath, "songFilePath");
+    const songData = await fs.readFile(songFilePath, "utf8");
+    const parsedSongData = JSON.parse(songData);
 
-    if (songs.length === 0) {
-      return res.status(404).json({ message: "No songs found" });
-    }
-
-    return res.status(200).json(songs);
+    res.status(200).json(parsedSongData);
   } catch (error) {
-    console.error("Error searching songs:", error);
-    return res.status(500).json({ message: "Server error" });
+    console.error("Error getting song:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
-export const getSongById = async (req, res) => {
-  try {
-    const { id } = req.params;
+export const findFilteredSongs = (req, res) => {
+  const { query } = req.query;
+  console.log(query);
 
-    const song = await Song.findById(id);
-
-    if (!song) {
-      return res.status(404).json({ message: "Song not found" });
-    }
-
-    return res.status(200).json(song);
-  } catch (error) {
-    console.error("Error getting song by ID:", error);
-    return res.status(500).json({ message: "Server error" });
+  if (!query) {
+    return res.status(400).json({ error: "Missing songName or artist" });
   }
+
+  const filteredSongs = songsDb.filter(song => {
+    const queryLower = query.toLowerCase();
+    const songLower = song.song.toLowerCase();
+    const artistLower = song.artist.toLowerCase();
+
+    return songLower.includes(queryLower) || artistLower.includes(queryLower);
+  });
+
+  res.status(200).json({ filteredSongs });
 };

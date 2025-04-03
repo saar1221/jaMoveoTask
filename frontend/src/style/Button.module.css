@@ -2,6 +2,7 @@
   color: inherit;
   text-transform: uppercase;
   padding: 0.8rem 1.6rem;
+  color: var(--text-color);
 }
 
 .primary {

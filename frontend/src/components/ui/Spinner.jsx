@@ -1,6 +1,6 @@
-import styles from "./Spinner.module.css";
+import styles from "../../style/Spinner.module.css";
 
-function Spinner({ fullScreen = false }) {
+export default function Spinner({ fullScreen = false }) {
   return (
     <div
       className={`${styles.spinnerContainer} ${
@@ -11,5 +11,3 @@ function Spinner({ fullScreen = false }) {
     </div>
   );
 }
-
-export default Spinner;
