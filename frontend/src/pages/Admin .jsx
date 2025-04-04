@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Results from "./Result";
-import apiRequest from "../../api/apiRequest";
+import apiRequest from "../api/apiRequest";
 import toast from "react-hot-toast";
 
 const Admin = () => {

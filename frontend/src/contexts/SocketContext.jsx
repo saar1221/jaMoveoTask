@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState, useContext } from "react";
 import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
 import { useNavigate } from "react-router";
-
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
 export const SocketContext = createContext();
 
 const SocketContextProvider = ({ children }) => {
@@ -14,12 +14,9 @@ const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (user && !socket) {
-      const socketInstance = io(
-        "https://jamoveotask-production.up.railway.app",
-        {
-          query: { userId: user.id, role: user.role },
-        }
-      );
+      const socketInstance = io(SOCKET_URL, {
+        query: { userId: user.id, role: user.role },
+      });
 
       socketInstance.on("connect", () => {
         console.log("Connected to the socket server.");

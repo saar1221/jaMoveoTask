@@ -1,5 +1,5 @@
 import { useState } from "react";
-import apiRequest from "../../api/apiRequest";
+import apiRequest from "../api/apiRequest";
 
 export function useSong() {
   const [loading, setLoading] = useState(false);
