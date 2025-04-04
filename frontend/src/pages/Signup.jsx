@@ -8,6 +8,7 @@ import FooterForm from "../components/FooterForm";
 import styles from "../style/LoginAndSignup.module.css";
 import { useSignupAuth } from "../hooks/useSignupAuth";
 import FormInput from "../components/FormInput";
+import toast from "react-hot-toast";
 
 const instruments = [
   "drums",
@@ -52,7 +53,7 @@ const Signup = () => {
         role,
       });
     } catch (err) {
-      console.error(err.message);
+      toast.error(err.message);
     } finally {
       setIsLoading(false);
     }

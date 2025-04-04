@@ -8,7 +8,7 @@ import FooterForm from "../components/FooterForm";
 import styles from "../style/LoginAndSignup.module.css";
 import { useLoginAuth } from "../hooks/useLoginAuth";
 import FormInput from "../components/FormInput";
-
+import toast from "react-hot-toast";
 const Login = () => {
   const {
     username,
@@ -28,7 +28,7 @@ const Login = () => {
     try {
       await login({ username, password });
     } catch (err) {
-      console.error(err.message);
+      toast.error(err.message);
     } finally {
       setIsLoading(false);
     }

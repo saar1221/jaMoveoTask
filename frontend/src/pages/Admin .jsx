@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Results from "./Result";
 import apiRequest from "../../api/apiRequest";
+import toast from "react-hot-toast";
 
 const Admin = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -19,7 +20,7 @@ const Admin = () => {
 
         setSongs(response.filteredSongs);
       } catch (error) {
-        console.error("Request failed:", error);
+        toast.error(error.message);
       }
     }
   };
