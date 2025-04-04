@@ -16,7 +16,7 @@ export const searchSongsByName = async (req, res) => {
   const songFilePath = path.join(
     __dirname,
     "../data/songs",
-    songName + ".json"
+    songName +"_.json"
   );
   const songData = await fs.readFile(songFilePath, "utf8");
   const parsedSongData = JSON.parse(songData);

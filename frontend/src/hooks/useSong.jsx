@@ -1,14 +1,14 @@
 import { useState } from "react";
 import apiRequest from "../api/apiRequest";
+import toast from "react-hot-toast";
 
 export function useSong() {
   const [loading, setLoading] = useState(false);
   const [song, setSong] = useState([]);
 
   const getSong = async songData => {
-    console.log("songData", songData);
     if (!songData) {
-      console.log("Error fetching song ", songData);
+      toast.error(`Error fetching song ${songData}`);
       return;
     }
     setLoading(true);
@@ -17,15 +17,15 @@ export function useSong() {
         url: `/songs/getSong/?songName=${songData.song}`,
         method: "GET",
       });
-      setSong(response);
+      setSong(response.lyrics);
 
       if (response?.error) {
-        console.log("Data error in login hook");
+        toast.error("Data error in login hook");
         throw new Error(response.error);
       }
-      return response;
+      return response.lyrics;
     } catch (error) {
-      console.log(error.message);
+      toast.error(error.message);
     } finally {
       setLoading(false);
     }

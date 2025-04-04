@@ -2,7 +2,10 @@ import React, { createContext, useEffect, useState, useContext } from "react";
 import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
 import { useNavigate } from "react-router";
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
+const SOCKET_URL =
+  import.meta.env.MODE === "development"
+    ? "http://localhost:4000/"
+    : import.meta.env.VITE_SOCKET_URL;
 export const SocketContext = createContext();
 
 const SocketContextProvider = ({ children }) => {

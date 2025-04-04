@@ -1,11 +1,9 @@
-// import { useNavigate } from "react-router";
 import { useSession } from "../hooks/useSession";
 import HandleLyrics from "./HandleLyrics";
 import { useAuthContext } from "../contexts/AuthContext";
 import { useLyrics } from "../hooks/useLyrics";
 
 const LyricsDisplay = ({ data }) => {
-  // const navigate = useNavigate();
   const { endSession } = useSession();
   const { user } = useAuthContext();
   const { isAutoScrolling, setIsAutoScrolling, scrollContainerRef } =
@@ -30,33 +28,60 @@ const LyricsDisplay = ({ data }) => {
         ref={scrollContainerRef}
         className="relative p-4 mt-5 space-y-8 max-h-[calc(100vh-260px)] overflow-y-auto"
       >
-        {data.map((line, lineIndex) => (
-          <div key={lineIndex} className="w-full">
-            {user.instrument !== "vocals" && (
-              <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 mb-1">
-                {line.map((word, wordIndex) => (
-                  <span
-                    key={`chord-${wordIndex}`}
-                    className="text-center text-base sm:text-lg font-semibold text-purple-600 w-fit"
-                  >
-                    {word.chords || "\u00A0"}
-                  </span>
-                ))}
-              </div>
-            )}
+        {user.instrument !== "vocals"
+          ? data.reduce((acc, _, i, arr) => {
+              if (i % 2 !== 0 || arr[i].type !== "chords") return acc;
 
-            <div className="flex flex-wrap justify-start gap-x-4 gap-y-2">
-              {line.map((word, wordIndex) => (
-                <span
-                  key={`lyrics-${wordIndex}`}
-                  className="text-center text-lg sm:text-xl font-bold text-gray-900 w-fit"
+              const chords = arr[i];
+              const words = arr[i + 1];
+
+              acc.push(
+                <div key={i} className="w-full mb-2">
+                  <div className="flex flex-wrap justify-start gap-x-4 gap-y-2 mb-1">
+                    {chords.text.split(" ").map((chord, idx) => (
+                      <span
+                        key={`chord-${i}-${idx}`}
+                        className="text-center text-base sm:text-lg font-semibold text-purple-600 w-fit"
+                      >
+                        {chord || "\u00A0"}
+                      </span>
+                    ))}
+                  </div>
+
+                  {words?.type === "words" && (
+                    <div className="flex flex-wrap justify-start gap-x-4 gap-y-2">
+                      {words.text.split(" ").map((word, idx) => (
+                        <span
+                          key={`word-${i}-${idx}`}
+                          className="text-center text-lg sm:text-xl font-bold text-gray-900 w-fit"
+                        >
+                          {word}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+
+              return acc;
+            }, [])
+          : data
+              .filter(line => line.type === "words")
+              .map((line, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-wrap justify-start gap-x-4 gap-y-2 mb-2"
                 >
-                  {word.lyrics}
-                </span>
+                  {line.text.split(" ").map((word, i) => (
+                    <span
+                      key={`word-${idx}-${i}`}
+                      className="text-center text-lg sm:text-xl font-bold text-gray-900 w-fit"
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </div>
               ))}
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
