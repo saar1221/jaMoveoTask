@@ -28,9 +28,7 @@ const Login = () => {
     try {
       await login({ username, password });
     } catch (err) {
-      toast(err, {
-        duration: 6000,
-      });
+      toast.error(err.message);
     } finally {
       setIsLoading(false);
     }
