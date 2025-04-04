@@ -8,19 +8,19 @@ export function useSignupAuth() {
   const [instrument, setInstrument] = useState("");
   const [role, setRole] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { register, user, token, isAuthenticated } = useAuthContext();
+  const { register, user, token } = useAuthContext();
 
   const navigate = useNavigate();
   useEffect(() => {
     console.log("useSignupAuth");
-    if (isAuthenticated && user?.role) {
+    if (token && user?.role) {
       if (user.role === "admin") {
         navigate("/main/admin");
       } else {
         navigate("/main/player");
       }
     }
-  }, [isAuthenticated, token]);
+  }, [user, navigate, token]);
   return {
     username,
     setUserName,

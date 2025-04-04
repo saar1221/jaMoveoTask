@@ -2,6 +2,7 @@ let socketIoServiceContainer = null;
 
 class SocketIoService {
   #socketIoServer;
+  #adminSocketList = [];
 
   init(io) {
     try {
@@ -17,43 +18,47 @@ class SocketIoService {
   #connectionSocketIo() {
     this.#socketIoServer.on("connection", socket => {
       const { userId, role } = socket.handshake.query;
+      if (userId != "undefined" && role == "admin") {
+        this.#adminSocketList.push(socket.id);
+      }
       console.log("New client connected:", userId, role, socket.id);
 
-      socket.on("sessionStart", sessionId => {
-        if (role === "player") return;
-
+      socket.on("sessionStart", ({ sessionId, song }) => {
         console.log("Session start:", sessionId);
         console.log("Session start:", userId, role);
-        this.#broadcastStartSession(sessionId);
+        this.#broadcastStartSession({ sessionId, song });
       });
 
       socket.on("sessionEnd", sessionId => {
         console.log("Session ended:", sessionId);
         this.#broadcastSessionEnd(sessionId);
       });
-      // socket.on("join-room", (room, userName, cb) => {
-      //   console.log(`${userName} joined room: ${room}`);
-      //   socket.join(room);
-      //   cb();
-      // });
-
-      // socket.on("message", data => {
-      //   this.#sendMessage(data, socket);
-      // });
 
       socket.on("disconnect", () => {
-        console.log("Client disconnected:", socket.id);
+        console.log("User disconnected ", socket.id);
+        if (this.#adminSocketList.includes(socket.id)) {
+          this.#socketIoServer.emit("sessionEnd");
+        }
       });
     });
   }
+  // socket.on("join-room", (room, userName, cb) => {
+  //   console.log(`${userName} joined room: ${room}`);
+  //   socket.join(room);
+  //   cb();
+  // });
 
-  #broadcastStartSession(sessionId) {
-    console.log(sessionId, "broadcastSongSelection");
-    this.#socketIoServer.emit("sessionStart", sessionId);
+  // socket.on("message", data => {
+  //   this.#sendMessage(data, socket);
+  // });
+
+  #broadcastStartSession(sessionData) {
+    console.log(sessionData, "broadcastSongSelection");
+    this.#socketIoServer.emit("sessionStart", sessionData);
   }
 
-  #broadcastSessionEnd(sessionId) {
-    this.#socketIoServer.emit("sessionEnd", sessionId);
+  #broadcastSessionEnd(sessionData) {
+    this.#socketIoServer.emit("sessionEnd", sessionData);
   }
 
   // #sendMessage(data, socket) {

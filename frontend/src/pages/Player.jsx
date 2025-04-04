@@ -5,11 +5,17 @@ import Spinner from "../components/ui/Spinner";
 
 const Player = () => {
   const navigate = useNavigate();
-  const { sessionActive } = useSocketContext();
+  const { sessionActive, sessionData } = useSocketContext();
 
   useEffect(() => {
     if (sessionActive) {
-      setTimeout(() => navigate("/main/live"), 1000);
+      setTimeout(() => {
+        navigate("/main/live-page", {
+          state: {
+            songDetails: sessionData,
+          },
+        });
+      }, 1000);
     }
   }, [sessionActive, navigate]);
 

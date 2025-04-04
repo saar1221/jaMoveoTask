@@ -1,15 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { useSession } from "../hooks/useSession";
+import { useAuthContext } from "../contexts/AuthContext";
 
 function Results({ songs }) {
   const navigate = useNavigate();
   const { startSession } = useSession();
-
-  const handlePlay = songId => {
-    console.log(songId, "songId songIdsongIdsongId");
-    startSession(songId);
-    navigate("/main/live");
+  const { user } = useAuthContext();
+  const handlePlay = song => {
+    startSession({ user, song });
+    navigate("/main/live-page", {
+      state: { songDetails: song },
+    });
   };
 
   return (
@@ -25,7 +27,7 @@ function Results({ songs }) {
               <span className="text-lg font-semibold">{song.artist}</span>
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 flex justify-center items-center"
-                onClick={() => handlePlay(song.id)}
+                onClick={() => handlePlay(song)}
               >
                 <img src="/play-button.svg" className="w-5 h-5" />
               </button>
