@@ -14,9 +14,12 @@ const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (user && !socket) {
-      const socketInstance = io("http://localhost:4000", {
-        query: { userId: user.id, role: user.role },
-      });
+      const socketInstance = io(
+        "https://jamoveotask-production.up.railway.app",
+        {
+          query: { userId: user.id, role: user.role },
+        }
+      );
 
       socketInstance.on("connect", () => {
         console.log("Connected to the socket server.");

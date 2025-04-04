@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect";
 import Button from "../components/ui/Button";
 import HeaderForm from "../components/HeaderForm";
 import Logo from "../components/ui/Logo";
@@ -110,7 +109,7 @@ const Signup = () => {
         <FooterForm text="Already have an account? " path="login" />
       </form>
 
-      {!isMobile && <Image name="register" />}
+      <Image name="register" />
     </main>
   );
 };
