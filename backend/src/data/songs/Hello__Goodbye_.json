@@ -1,0 +1,445 @@
+{
+  "songName": "Hello, Goodbye ",
+  "lyrics": [
+    {
+      "text": "F6             C",
+      "type": "chords"
+    },
+    {
+      "text": "You say yes,   I say no",
+      "type": "words"
+    },
+    {
+      "text": "G7                 Am            G7  Am",
+      "type": "chords"
+    },
+    {
+      "text": "You say stop   and I say go, go, go",
+      "type": "words"
+    },
+    {
+      "text": "G7",
+      "type": "chords"
+    },
+    {
+      "text": "Oh, no",
+      "type": "words"
+    },
+    {
+      "text": "G7                   G7      C   C/B",
+      "type": "chords"
+    },
+    {
+      "text": "You say goodbye  and I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C   C/B",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Bb7",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "F6             C",
+      "type": "chords"
+    },
+    {
+      "text": "I say high,    you say low",
+      "type": "words"
+    },
+    {
+      "text": "G7                 Am            G7    Am",
+      "type": "chords"
+    },
+    {
+      "text": "You say why,   and I say I don't know",
+      "type": "words"
+    },
+    {
+      "text": "G7",
+      "type": "chords"
+    },
+    {
+      "text": "Oh, no",
+      "type": "words"
+    },
+    {
+      "text": "G7                            C    C/B",
+      "type": "chords"
+    },
+    {
+      "text": "You say goodbye   and I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C   C/B",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Bb7",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "F6 C",
+      "type": "chords"
+    },
+    {
+      "text": "G7",
+      "type": "chords"
+    },
+    {
+      "text": "Why, why, why, why, why, why",
+      "type": "words"
+    },
+    {
+      "text": "Am",
+      "type": "chords"
+    },
+    {
+      "text": "Do you say  good bye",
+      "type": "words"
+    },
+    {
+      "text": "G7                       Am",
+      "type": "chords"
+    },
+    {
+      "text": "Goodbye, bye, bye, bye, bye",
+      "type": "words"
+    },
+    {
+      "text": "G7",
+      "type": "chords"
+    },
+    {
+      "text": "Oh, no",
+      "type": "words"
+    },
+    {
+      "text": "G7                            C    C/B",
+      "type": "chords"
+    },
+    {
+      "text": "You say goodbye   and I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C   C/B",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Bb7",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "F6             C",
+      "type": "chords"
+    },
+    {
+      "text": "You say yes,   I say no",
+      "type": "words"
+    },
+    {
+      "text": "G7                 Am            G7  Am",
+      "type": "chords"
+    },
+    {
+      "text": "You say stop   and I say go, go, go",
+      "type": "words"
+    },
+    {
+      "text": "G7",
+      "type": "chords"
+    },
+    {
+      "text": "Oh, no",
+      "type": "words"
+    },
+    {
+      "text": "G7                   G7      C   C/B",
+      "type": "chords"
+    },
+    {
+      "text": "You say goodbye  and I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C   C/B",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Bb7",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello",
+      "type": "words"
+    },
+    {
+      "text": "Am  Am/G",
+      "type": "chords"
+    },
+    {
+      "text": "Hello, hello",
+      "type": "words"
+    },
+    {
+      "text": "F               Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I don't know why you say goodbye",
+      "type": "words"
+    },
+    {
+      "text": "Ab  Gm F#m F   C",
+      "type": "chords"
+    },
+    {
+      "text": "I say hello          hello",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "G7 G7 F6 G7 x4",
+      "type": "chords"
+    },
+    {
+      "text": "C          Dm C    Dm",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "C          Dm C    Dm",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "C          Dm C    Dm",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "C          Dm C    Dm",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "C          Dm C    Dm",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "C          Dm C    Dm",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "C          Dm C",
+      "type": "chords"
+    },
+    {
+      "text": "Hela, heba helloa",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "G7 G7 F6 G7 x4",
+      "type": "chords"
+    },
+    {
+      "text": "Ending:",
+      "type": "words"
+    },
+    {
+      "text": "F6 G7 G7 G7 x4",
+      "type": "chords"
+    }
+  ]
+}

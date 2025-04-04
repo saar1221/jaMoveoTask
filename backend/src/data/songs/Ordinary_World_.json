@@ -1,0 +1,525 @@
+{
+  "songName": "Ordinary World ",
+  "lyrics": [
+    {
+      "text": "Intro:",
+      "type": "words"
+    },
+    {
+      "text": "B",
+      "type": "chords"
+    },
+    {
+      "text": "F#m",
+      "type": "chords"
+    },
+    {
+      "text": "F#m",
+      "type": "chords"
+    },
+    {
+      "text": "D             D/C#        D/C",
+      "type": "chords"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Came in from a rainy Thursday",
+      "type": "words"
+    },
+    {
+      "text": "E              F#4  C#m",
+      "type": "chords"
+    },
+    {
+      "text": "On the avenue",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Thought I heard you",
+      "type": "words"
+    },
+    {
+      "text": "E  F#4  C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Talking softly",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "I turned on the lights",
+      "type": "words"
+    },
+    {
+      "text": "E             F#4  C#m",
+      "type": "chords"
+    },
+    {
+      "text": "The TV  and the radio",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Still I can't escape the",
+      "type": "words"
+    },
+    {
+      "text": "E    F#4  C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Ghost of you",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "What is happening to it all?",
+      "type": "words"
+    },
+    {
+      "text": "Abm",
+      "type": "chords"
+    },
+    {
+      "text": "Crazy some say",
+      "type": "words"
+    },
+    {
+      "text": "Eb7                      E",
+      "type": "chords"
+    },
+    {
+      "text": "Where is the life that I recognise?",
+      "type": "words"
+    },
+    {
+      "text": "B",
+      "type": "chords"
+    },
+    {
+      "text": "Gone away",
+      "type": "words"
+    },
+    {
+      "text": "B                         F#m",
+      "type": "chords"
+    },
+    {
+      "text": "But I won't cry for yesterday",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "There's an ordinary world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#      E       B",
+      "type": "chords"
+    },
+    {
+      "text": "Somehow I have to find",
+      "type": "words"
+    },
+    {
+      "text": "B                       F#m",
+      "type": "chords"
+    },
+    {
+      "text": "And as I try to make my way",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "To the ordinary world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#        D/C",
+      "type": "chords"
+    },
+    {
+      "text": "I will learn to survive",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "C#m C#m F#",
+      "type": "chords"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Passion or coincidence once",
+      "type": "words"
+    },
+    {
+      "text": "E                   F#4 C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Prompted you to say",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Pride will tear us",
+      "type": "words"
+    },
+    {
+      "text": "E  F#4",
+      "type": "chords"
+    },
+    {
+      "text": "Both apart",
+      "type": "words"
+    },
+    {
+      "text": "F#4      C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Well now pride's",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Gone out the window",
+      "type": "words"
+    },
+    {
+      "text": "E             F#4  C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Cross the rooftops, runaway",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Left me in the vacuum",
+      "type": "words"
+    },
+    {
+      "text": "E       F#4",
+      "type": "chords"
+    },
+    {
+      "text": "Of my heart",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "What is happening to me?",
+      "type": "words"
+    },
+    {
+      "text": "Abm",
+      "type": "chords"
+    },
+    {
+      "text": "Crazy some say",
+      "type": "words"
+    },
+    {
+      "text": "Eb7",
+      "type": "chords"
+    },
+    {
+      "text": "Where is my friend",
+      "type": "words"
+    },
+    {
+      "text": "E",
+      "type": "chords"
+    },
+    {
+      "text": "When I need you most?",
+      "type": "words"
+    },
+    {
+      "text": "B",
+      "type": "chords"
+    },
+    {
+      "text": "Gone away",
+      "type": "words"
+    },
+    {
+      "text": "B                         F#m",
+      "type": "chords"
+    },
+    {
+      "text": "But I won't cry for yesterday",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "There's an ordinary world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#      E       B",
+      "type": "chords"
+    },
+    {
+      "text": "Somehow I have to find",
+      "type": "words"
+    },
+    {
+      "text": "B                       F#m",
+      "type": "chords"
+    },
+    {
+      "text": "And as I try to make my way",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "To the ordinary world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#        E",
+      "type": "chords"
+    },
+    {
+      "text": "I will learn to survive",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "B B F#m F#m D D/C# E E",
+      "type": "chords"
+    },
+    {
+      "text": "B B F#m F#m D D/C# D/C",
+      "type": "chords"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Papers in the roadside tell",
+      "type": "words"
+    },
+    {
+      "text": "E             F#4    C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Of suffering and greed",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Feared today",
+      "type": "words"
+    },
+    {
+      "text": "E F#4",
+      "type": "chords"
+    },
+    {
+      "text": "Forgot tomorrow       oh oh",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Here beside the news of holy",
+      "type": "words"
+    },
+    {
+      "text": "E            F#4   C#m",
+      "type": "chords"
+    },
+    {
+      "text": "War and holy need",
+      "type": "words"
+    },
+    {
+      "text": "C#m",
+      "type": "chords"
+    },
+    {
+      "text": "Ours is just",
+      "type": "words"
+    },
+    {
+      "text": "E        B",
+      "type": "chords"
+    },
+    {
+      "text": "A little sorrowed talk",
+      "type": "words"
+    },
+    {
+      "text": "B                         F#m",
+      "type": "chords"
+    },
+    {
+      "text": "And I don't cry for yesterday",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "There's an ordinary world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#      E       B",
+      "type": "chords"
+    },
+    {
+      "text": "Somehow I have to find",
+      "type": "words"
+    },
+    {
+      "text": "B                       F#m",
+      "type": "chords"
+    },
+    {
+      "text": "And as I try to make my way",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "To the ordinary world",
+      "type": "words"
+    },
+    {
+      "text": "A           E",
+      "type": "chords"
+    },
+    {
+      "text": "I will learn to survive",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "F#m D B F#m x4",
+      "type": "chords"
+    },
+    {
+      "text": "B     F#m          D",
+      "type": "chords"
+    },
+    {
+      "text": "Every world        is my world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#        E",
+      "type": "chords"
+    },
+    {
+      "text": "(I will learn to survive)",
+      "type": "words"
+    },
+    {
+      "text": "B      F#m         D",
+      "type": "chords"
+    },
+    {
+      "text": "Any world        is my world",
+      "type": "words"
+    },
+    {
+      "text": "D/C#        E",
+      "type": "chords"
+    },
+    {
+      "text": "(I will learn to survive)",
+      "type": "words"
+    },
+    {
+      "text": "B      F#m        D     D/C# E",
+      "type": "chords"
+    },
+    {
+      "text": "Any world       is my world",
+      "type": "words"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "F#m D B F#m x4",
+      "type": "chords"
+    },
+    {
+      "text": "Ending:",
+      "type": "words"
+    },
+    {
+      "text": "B F#m F#m D x4",
+      "type": "chords"
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "songName": "Part Of Your World ",
+  "lyrics": [
+    {
+      "text": "Intro:",
+      "type": "words"
+    },
+    {
+      "text": "Gsus4",
+      "type": "chords"
+    },
+    {
+      "text": "F",
+      "type": "chords"
+    },
+    {
+      "text": "Look at this stuff",
+      "type": "words"
+    },
+    {
+      "text": "G",
+      "type": "chords"
+    },
+    {
+      "text": "Isnt it neat?",
+      "type": "words"
+    },
+    {
+      "text": "F",
+      "type": "chords"
+    },
+    {
+      "text": "Wouldnt you think my collections",
+      "type": "words"
+    },
+    {
+      "text": "G",
+      "type": "chords"
+    },
+    {
+      "text": "Complete?",
+      "type": "words"
+    },
+    {
+      "text": "Em                            Am",
+      "type": "chords"
+    },
+    {
+      "text": "Wouldnt you think I'm the girl the",
+      "type": "words"
+    },
+    {
+      "text": "D4/7 D7",
+      "type": "chords"
+    },
+    {
+      "text": "Girl who has everything",
+      "type": "words"
+    },
+    {
+      "text": "F",
+      "type": "chords"
+    },
+    {
+      "text": "Look at this trove",
+      "type": "words"
+    },
+    {
+      "text": "G",
+      "type": "chords"
+    },
+    {
+      "text": "Treasures untold",
+      "type": "words"
+    },
+    {
+      "text": "F                       G",
+      "type": "chords"
+    },
+    {
+      "text": "How many wonders can one cavern",
+      "type": "words"
+    },
+    {
+      "text": "Hold?",
+      "type": "words"
+    },
+    {
+      "text": "Em                  Am",
+      "type": "chords"
+    },
+    {
+      "text": "Looking around here you think",
+      "type": "words"
+    },
+    {
+      "text": "Am              D4/7 D7",
+      "type": "chords"
+    },
+    {
+      "text": "Sure, she's got everything",
+      "type": "words"
+    },
+    {
+      "text": "Am",
+      "type": "chords"
+    },
+    {
+      "text": "I've got gadgets and gizmos",
+      "type": "words"
+    },
+    {
+      "text": "A-plenty",
+      "type": "words"
+    },
+    {
+      "text": "Em",
+      "type": "chords"
+    },
+    {
+      "text": "I've got whozits and",
+      "type": "words"
+    },
+    {
+      "text": "Whatzits galore",
+      "type": "words"
+    },
+    {
+      "text": "Am",
+      "type": "chords"
+    },
+    {
+      "text": "You want thingamabobs?",
+      "type": "words"
+    },
+    {
+      "text": "D7",
+      "type": "chords"
+    },
+    {
+      "text": "I've got twenty!",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "But who cares?",
+      "type": "words"
+    },
+    {
+      "text": "D",
+      "type": "chords"
+    },
+    {
+      "text": "No big deal",
+      "type": "words"
+    },
+    {
+      "text": "Gsus4   G",
+      "type": "chords"
+    },
+    {
+      "text": "I want more",
+      "type": "words"
+    },
+    {
+      "text": "C                   Em",
+      "type": "chords"
+    },
+    {
+      "text": "I wanna be where the people are",
+      "type": "words"
+    },
+    {
+      "text": "F            G",
+      "type": "chords"
+    },
+    {
+      "text": "I wanna see, wanna see them dancin'",
+      "type": "words"
+    },
+    {
+      "text": "Am                        Em",
+      "type": "chords"
+    },
+    {
+      "text": "Walking around on those - what",
+      "type": "words"
+    },
+    {
+      "text": "Do you call 'em?",
+      "type": "words"
+    },
+    {
+      "text": "F     G",
+      "type": "chords"
+    },
+    {
+      "text": "Oh - feet!",
+      "type": "words"
+    },
+    {
+      "text": "C                             Em",
+      "type": "chords"
+    },
+    {
+      "text": "Flippin' your fins, you don't get",
+      "type": "words"
+    },
+    {
+      "text": "Too far",
+      "type": "words"
+    },
+    {
+      "text": "F",
+      "type": "chords"
+    },
+    {
+      "text": "Legs are required for jumping,",
+      "type": "words"
+    },
+    {
+      "text": "G",
+      "type": "chords"
+    },
+    {
+      "text": "Dancing",
+      "type": "words"
+    },
+    {
+      "text": "Am                       Em",
+      "type": "chords"
+    },
+    {
+      "text": "Strolling along down a - what's",
+      "type": "words"
+    },
+    {
+      "text": "That word again?",
+      "type": "words"
+    },
+    {
+      "text": "F          G",
+      "type": "chords"
+    },
+    {
+      "text": "Street",
+      "type": "words"
+    },
+    {
+      "text": "C                     C7",
+      "type": "chords"
+    },
+    {
+      "text": "Up where they walk, up where",
+      "type": "words"
+    },
+    {
+      "text": "They run",
+      "type": "words"
+    },
+    {
+      "text": "F",
+      "type": "chords"
+    },
+    {
+      "text": "Up where they stay all day",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "In the sun",
+      "type": "words"
+    },
+    {
+      "text": "C                    Gsus4",
+      "type": "chords"
+    },
+    {
+      "text": "Wanderin' free - wish I could be",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "Part of that world",
+      "type": "words"
+    },
+    {
+      "text": "Am              G",
+      "type": "chords"
+    },
+    {
+      "text": "What would I give if I could live",
+      "type": "words"
+    },
+    {
+      "text": "Em       Am",
+      "type": "chords"
+    },
+    {
+      "text": "Out of these waters?",
+      "type": "words"
+    },
+    {
+      "text": "F               G",
+      "type": "chords"
+    },
+    {
+      "text": "What would I pay to spend a day",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "Warm on the sand?",
+      "type": "words"
+    },
+    {
+      "text": "Am             G",
+      "type": "chords"
+    },
+    {
+      "text": "Bet'cha on land they understand",
+      "type": "words"
+    },
+    {
+      "text": "Am",
+      "type": "chords"
+    },
+    {
+      "text": "That they don't reprimand their",
+      "type": "words"
+    },
+    {
+      "text": "F",
+      "type": "chords"
+    },
+    {
+      "text": "Daughters",
+      "type": "words"
+    },
+    {
+      "text": "Am       D4/7     D7",
+      "type": "chords"
+    },
+    {
+      "text": "Bright young women sick of swimmin'",
+      "type": "words"
+    },
+    {
+      "text": "Gsus4     G",
+      "type": "chords"
+    },
+    {
+      "text": "Ready to stand",
+      "type": "words"
+    },
+    {
+      "text": "C                         Em",
+      "type": "chords"
+    },
+    {
+      "text": "I'm ready to know what the people",
+      "type": "words"
+    },
+    {
+      "text": "Know",
+      "type": "words"
+    },
+    {
+      "text": "F                        G",
+      "type": "chords"
+    },
+    {
+      "text": "Ask 'em my questions and get some",
+      "type": "words"
+    },
+    {
+      "text": "Answers",
+      "type": "words"
+    },
+    {
+      "text": "Am                Em",
+      "type": "chords"
+    },
+    {
+      "text": "What's a fire and why does it",
+      "type": "words"
+    },
+    {
+      "text": "What's the word?",
+      "type": "words"
+    },
+    {
+      "text": "F       G",
+      "type": "chords"
+    },
+    {
+      "text": "Burn?",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "When's it my turn?",
+      "type": "words"
+    },
+    {
+      "text": "C7                 F",
+      "type": "chords"
+    },
+    {
+      "text": "Wouldn't I love, love to explore",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "That shore up above?",
+      "type": "words"
+    },
+    {
+      "text": "C",
+      "type": "chords"
+    },
+    {
+      "text": "Out of the sea",
+      "type": "words"
+    },
+    {
+      "text": "Gsus4",
+      "type": "chords"
+    },
+    {
+      "text": "Wish I could be",
+      "type": "words"
+    },
+    {
+      "text": "C           Csus4     C  Gsus4",
+      "type": "chords"
+    },
+    {
+      "text": "Part of that world",
+      "type": "words"
+    }
+  ]
+}

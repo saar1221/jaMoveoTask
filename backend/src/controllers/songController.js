@@ -1,4 +1,4 @@
-import songsDb from "../data/SongsDb.json" assert { type: "json" };
+import songsDb from "../data/SongsDb.json" with { type: 'json' };
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -6,22 +6,18 @@ import HttpErrors from "../utils/Errors.js";
 
 export const searchSongsByName = async (req, res) => {
   let { songName } = req.query;
-
-  songName = songName.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase();
-
+  
   if (!songName) {
     throw HttpErrors.badRequest("Missing songName");
   }
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-
   const songFilePath = path.join(
     __dirname,
     "../data/songs",
-    `/${songName}` + ".json"
+    songName + ".json"
   );
-
   const songData = await fs.readFile(songFilePath, "utf8");
   const parsedSongData = JSON.parse(songData);
 
