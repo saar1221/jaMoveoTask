@@ -54,6 +54,9 @@ const Signup = () => {
       });
     } catch (err) {
       toast.error(err.message);
+      toast(err, {
+        duration: 6000,
+      });
     } finally {
       setIsLoading(false);
     }
