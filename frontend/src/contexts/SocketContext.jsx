@@ -1,18 +1,21 @@
 import React, { createContext, useEffect, useState, useContext } from "react";
 import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
+import { useNavigate } from "react-router";
 
 export const SocketContext = createContext();
 
 const SocketContextProvider = ({ children }) => {
+  const navigate = useNavigate();
   const [socket, setSocket] = useState(null);
+  const [sessionData, setSessionData] = useState(null);
   const [sessionActive, setSessionActive] = useState(false);
   const { user } = useAuthContext();
 
   useEffect(() => {
     if (user && !socket) {
       const socketInstance = io("http://localhost:4000", {
-        query: { userId: user._id, role: user.role },
+        query: { userId: user.id, role: user.role },
       });
 
       socketInstance.on("connect", () => {
@@ -20,13 +23,20 @@ const SocketContextProvider = ({ children }) => {
         setSocket(socketInstance);
       });
 
-      socketInstance.on("sessionStart", data => {
+      socketInstance.on("sessionStart", ({ song }) => {
+        console.log("Session started: time", new Date().toLocaleTimeString());
         setSessionActive(true);
-        console.log("Session started:", data);
+        setSessionData(song);
+        console.log("Session started:", { sessionId: user.id, song });
       });
 
       socketInstance.on("sessionEnd", () => {
+        console.log("sessionEnd");
         setSessionActive(false);
+        setSessionData(null);
+
+        const path = user.role === "admin" ? -1 : "/main/player";
+        navigate(path);
       });
 
       return () => {
@@ -36,7 +46,9 @@ const SocketContextProvider = ({ children }) => {
   }, [user]);
 
   return (
-    <SocketContext.Provider value={{ socket, sessionActive, setSessionActive }}>
+    <SocketContext.Provider
+      value={{ socket, sessionData, sessionActive, setSessionActive }}
+    >
       {children}
     </SocketContext.Provider>
   );

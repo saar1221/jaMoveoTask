@@ -7,18 +7,17 @@ export function useLoginAuth() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { token, user, login, isAuthenticated } = useAuthContext();
+  const { token, user, login } = useAuthContext();
 
   useEffect(() => {
-    console.log(user, token, "isAuthenticated");
-    if (isAuthenticated && user?.role) {
+    if (token && user?.role) {
       if (user.role === "admin") {
         navigate("/main/admin");
       } else {
         navigate("/main/player");
       }
     }
-  }, [isAuthenticated]);
+  }, [token, user, navigate]);
   return {
     username,
     setUserName,

@@ -9,14 +9,14 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import Player from "./pages/Player";
 import Admin from "./pages/Admin ";
 import PageNotFound from "./pages/PageNotFound";
-import Live from "./pages/Live";
+import LivePage from "./pages/LivePage";
 import Results from "./pages/Result";
 
 function App() {
   return (
-    <AuthProvider>
-      <SocketContextProvider>
-        <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
+        <SocketContextProvider>
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
             <Route index path="login" element={<Login />} />
@@ -33,14 +33,14 @@ function App() {
               <Route path="admin" element={<Admin />} />
               <Route path="admin-result" element={<Results />} />
               <Route path="player" element={<Player />} />
-              <Route path="live" element={<Live />} />
+              <Route path="live-page" element={<LivePage />} />
             </Route>
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-        </BrowserRouter>
-      </SocketContextProvider>
-    </AuthProvider>
+        </SocketContextProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 

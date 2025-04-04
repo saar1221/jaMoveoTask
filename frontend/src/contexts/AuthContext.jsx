@@ -3,34 +3,34 @@ import apiRequest from "../../api/apiRequest";
 
 const AuthContext = createContext();
 
+// const initialState = {
+//   user: JSON.parse(localStorage.getItem("user")) || null,
+//   token: localStorage.getItem("token") || null,
+// };
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || null,
-  isAuthenticated: false,
-  token: localStorage.getItem("token") || null,
+  user: null,
+  token: null,
 };
 
-function reducer(state, action) {
+function reducer(_state, action) {
   switch (action.type) {
     case "set-user": {
       const { token, user } = action.payload;
       localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("token", token);
-      return { ...state, user, token, isAuthenticated: true };
+      return { user, token };
     }
     case "logout":
-      localStorage.removeItem("token");
       localStorage.removeItem("user");
-      return { ...initialState };
+      localStorage.removeItem("token");
+      return initialState;
     default:
       throw new Error("Unknown action");
   }
 }
 
 function AuthProvider({ children }) {
-  const [{ user, isAuthenticated, token }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [{ user, token }, dispatch] = useReducer(reducer, initialState);
 
   async function register({ username, password, instrument, role }) {
     if (instrument === "") instrument = "none";
@@ -65,9 +65,7 @@ function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider
-      value={{ user, isAuthenticated, token, login, logout, register }}
-    >
+    <AuthContext.Provider value={{ user, token, login, logout, register }}>
       {children}
     </AuthContext.Provider>
   );
