@@ -12,7 +12,7 @@ const initialState = {
 function reducer(_state, action) {
   switch (action.type) {
     case "set-user": {
-      const { token, user } = action.payload;
+      const { user, token } = action.payload;
       return { user, token };
     }
     case "logout":
@@ -32,10 +32,10 @@ function AuthProvider({ children }) {
       method: "POST",
       data: { username, password, instrument, role },
     };
-    const { user, token } = await apiRequest(payload);
-    if (user) {
-      toast.success("Registration successful!");
-    }
+    const { user, token, message } = await apiRequest(payload);
+
+    toast.success(message);
+
     dispatch({
       type: "set-user",
       payload: { user, token },
@@ -48,6 +48,7 @@ function AuthProvider({ children }) {
       method: "POST",
       data: { username, password },
     });
+
     if (user) {
       toast.success("Login successful!");
     }

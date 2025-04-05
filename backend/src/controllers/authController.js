@@ -1,23 +1,19 @@
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import User from "../models/User.js";
 import HttpErrors from "../utils/Errors.js";
+import { createUser, findUser } from "./authService.js";
 
 export const registerUser = async (req, res, _next) => {
   const { username, password, instrument, role } = req.body;
-  const hashedPassword = await bcrypt.hash(password, 10);
-  const userResponse = await User.create({
+
+  if (!username | !password | !role) {
+    throw HttpErrors.badRequest("Missing data");
+  }
+
+  const { user, token } = await createUser({
     username,
-    password: hashedPassword,
+    password,
     instrument,
     role,
   });
-  const token = jwt.sign(
-    { id: userResponse._id, role: userResponse.role },
-    process.env.JWT_SECRET,
-    { expiresIn: "1h" }
-  );
-  const user = { id: userResponse.id, username, instrument, role };
   res
     .status(201)
     .json({ message: "User registered successfully!", user, token });
@@ -26,26 +22,12 @@ export const registerUser = async (req, res, _next) => {
 export const loginUser = async (req, res, _next) => {
   const { username, password } = req.body;
 
-  const userResponse = await User.findOne({ username });
-  if (!userResponse) {
-    throw HttpErrors.notFound("User not found!");
+  if (!username | !password) {
+    throw HttpErrors.badRequest("Missing data");
   }
 
-  const isMatch = await bcrypt.compare(password, userResponse.password);
-  if (!isMatch) {
-    throw HttpErrors.badRequest("Invalid credentials!");
-  }
-  const token = jwt.sign(
-    { id: userResponse._id, role: userResponse.role },
-    process.env.JWT_SECRET,
-    { expiresIn: "1h" }
-  );
-  const user = {
-    id: userResponse.id,
-    username,
-    instrument: userResponse.instrument,
-    role: userResponse.role,
-  };
+  const { user, token } = await findUser({ username, password });
+  console.log(user, token, "user, token");
 
   res.json({ user, token });
 };

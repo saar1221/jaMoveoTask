@@ -1,43 +1,24 @@
-import songsDb from "../data/SongsDb.json" with { type: 'json' };
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
 import HttpErrors from "../utils/Errors.js";
+import { getJsonSong, getFilteredSongs } from "./songService.js";
 
-export const searchSongsByName = async (req, res) => {
+export const searchSongsByName = async (req, res, _next) => {
   let { songName } = req.query;
-  
+
   if (!songName) {
     throw HttpErrors.badRequest("Missing songName");
   }
 
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  const songFilePath = path.join(
-    __dirname,
-    "../data/songs",
-    songName +"_.json"
-  );
-  const songData = await fs.readFile(songFilePath, "utf8");
-  const parsedSongData = JSON.parse(songData);
-
+  const parsedSongData = await getJsonSong({ songName });
   res.status(200).json(parsedSongData);
 };
 
-export const findFilteredSongs = (req, res) => {
+export const findFilteredSongs = (req, res, _next) => {
   const { query } = req.query;
 
   if (!query) {
     throw HttpErrors.badRequest("Missing songName or artist");
   }
 
-  const filteredSongs = songsDb.filter(song => {
-    const queryLower = query.toLowerCase();
-    const songLower = song.song.toLowerCase();
-    const artistLower = song.artist.toLowerCase();
-
-    return songLower.includes(queryLower) || artistLower.includes(queryLower);
-  });
-
+  const filteredSongs = getFilteredSongs({ query });
   res.status(200).json({ filteredSongs });
 };
