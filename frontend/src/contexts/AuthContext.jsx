@@ -6,16 +6,18 @@ const AuthContext = createContext();
 
 const initialState = {
   user: null,
-  token: null,
+  token: localStorage.getItem("token") | null,
 };
 
 function reducer(_state, action) {
   switch (action.type) {
     case "set-user": {
       const { user, token } = action.payload;
+      localStorage.setItem("token", token);
       return { user, token };
     }
     case "logout":
+      localStorage.removeItem("token");
       return initialState;
     default:
       throw new Error("Unknown action");

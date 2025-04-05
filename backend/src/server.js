@@ -13,7 +13,7 @@ dotenv.config();
 const defaultCorsOptions = {
   origin: "*",
   methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 const app = express();

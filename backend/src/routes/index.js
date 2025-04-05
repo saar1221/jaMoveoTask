@@ -1,10 +1,11 @@
 import { Router } from "express";
 import authRoutes from "./authRoutes.js";
 import songRoutes from "./songRoutes.js";
+import { authenticateToken } from "../middleware/authMiddleware.js";
 
 const router = Router();
 router.use("/api/auth", authRoutes);
-router.use("/api/songs", songRoutes);
+router.use("/api/songs", authenticateToken, songRoutes);
 router.use((err, _req, res, _next) => {
   console.error(err);
 
