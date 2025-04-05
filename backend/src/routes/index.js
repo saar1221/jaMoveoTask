@@ -1,12 +1,10 @@
 import { Router } from "express";
 import authRoutes from "./authRoutes.js";
 import songRoutes from "./songRoutes.js";
-import errorsRouter from "./errorsRouter.js";
 
 const router = Router();
 router.use("/api/auth", authRoutes);
 router.use("/api/songs", songRoutes);
-// router.use(errorsRouter);
 router.use((err, _req, res, _next) => {
   console.error(err);
 
