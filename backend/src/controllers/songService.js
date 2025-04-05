@@ -9,7 +9,7 @@ const getJsonSong = async ({ songName }) => {
   const songFilePath = path.join(
     __dirname,
     "../data/songs",
-    songName + "_.json"
+    songName+"_.json"
   );
   const songData = await fs.readFile(songFilePath, "utf8");
   return JSON.parse(songData);
