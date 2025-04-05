@@ -1,27 +1,22 @@
 import { createContext, useContext, useReducer } from "react";
-import apiRequest from "../../api/apiRequest";
+import apiRequest from "../api/apiRequest";
+import toast from "react-hot-toast";
 
 const AuthContext = createContext();
 
-// const initialState = {
-//   user: JSON.parse(localStorage.getItem("user")) || null,
-//   token: localStorage.getItem("token") || null,
-// };
 const initialState = {
   user: null,
-  token: null,
+  token: localStorage.getItem("token") | null,
 };
 
 function reducer(_state, action) {
   switch (action.type) {
     case "set-user": {
-      const { token, user } = action.payload;
-      localStorage.setItem("user", JSON.stringify(user));
+      const { user, token } = action.payload;
       localStorage.setItem("token", token);
       return { user, token };
     }
     case "logout":
-      localStorage.removeItem("user");
       localStorage.removeItem("token");
       return initialState;
     default:
@@ -39,7 +34,9 @@ function AuthProvider({ children }) {
       method: "POST",
       data: { username, password, instrument, role },
     };
-    const { user, token } = await apiRequest(payload);
+    const { user, token, message } = await apiRequest(payload);
+
+    toast.success(message);
 
     dispatch({
       type: "set-user",
@@ -54,6 +51,9 @@ function AuthProvider({ children }) {
       data: { username, password },
     });
 
+    if (user) {
+      toast.success("Login successful!");
+    }
     dispatch({
       type: "set-user",
       payload: { user, token },

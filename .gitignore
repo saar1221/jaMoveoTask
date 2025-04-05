@@ -10,5 +10,5 @@ frontend/package-lock.json/
 # Optionally, ignore logs, build files, and other common directories
 *.log
 *.env
-dist/
+# dist/
 build/

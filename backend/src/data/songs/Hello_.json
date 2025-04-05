@@ -1,0 +1,525 @@
+{
+  "songName": "Hello ",
+  "lyrics": [
+    {
+      "text": "Intro:",
+      "type": "words"
+    },
+    {
+      "text": "Fm Ab Eb C#",
+      "type": "chords"
+    },
+    {
+      "text": "Fm   Ab       Eb  C#",
+      "type": "chords"
+    },
+    {
+      "text": "Hello,     it's me",
+      "type": "words"
+    },
+    {
+      "text": "Fm           Ab              Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I was wondering if after all these years",
+      "type": "words"
+    },
+    {
+      "text": "C#",
+      "type": "chords"
+    },
+    {
+      "text": "You'd like to meet",
+      "type": "words"
+    },
+    {
+      "text": "Fm   Ab      Eb    C#",
+      "type": "chords"
+    },
+    {
+      "text": "To go over    everything",
+      "type": "words"
+    },
+    {
+      "text": "Fm                 Ab",
+      "type": "chords"
+    },
+    {
+      "text": "They say that time's supposed to heal ya,",
+      "type": "words"
+    },
+    {
+      "text": "Eb        C#",
+      "type": "chords"
+    },
+    {
+      "text": "But I ain't done much healing",
+      "type": "words"
+    },
+    {
+      "text": "Fm   Ab         Eb       C#",
+      "type": "chords"
+    },
+    {
+      "text": "Hello,    can you hear me?",
+      "type": "words"
+    },
+    {
+      "text": "Fm          Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I'm in California dreaming",
+      "type": "words"
+    },
+    {
+      "text": "Eb             C#",
+      "type": "chords"
+    },
+    {
+      "text": "About who we used to be",
+      "type": "words"
+    },
+    {
+      "text": "Fm      Ab      Eb   C#",
+      "type": "chords"
+    },
+    {
+      "text": "When we were younger    and free",
+      "type": "words"
+    },
+    {
+      "text": "Fm            Ab",
+      "type": "chords"
+    },
+    {
+      "text": "I've forgotten how it felt",
+      "type": "words"
+    },
+    {
+      "text": "Eb                C#",
+      "type": "chords"
+    },
+    {
+      "text": "Before the world fell at our feet",
+      "type": "words"
+    },
+    {
+      "text": "Fm         Eb    Cm   C#",
+      "type": "chords"
+    },
+    {
+      "text": "There's such a difference    between us",
+      "type": "words"
+    },
+    {
+      "text": "Fm  Eb   C#",
+      "type": "chords"
+    },
+    {
+      "text": "And a million  miles",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#      Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "Hello from the other side",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#            Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I must've called a thousand times",
+      "type": "words"
+    },
+    {
+      "text": "Fm    C#",
+      "type": "chords"
+    },
+    {
+      "text": "To tell you  I'm sorry",
+      "type": "words"
+    },
+    {
+      "text": "Ab              Eb",
+      "type": "chords"
+    },
+    {
+      "text": "For everything that I've done",
+      "type": "words"
+    },
+    {
+      "text": "Fm       C#     Ab         Eb",
+      "type": "chords"
+    },
+    {
+      "text": "But when I call you never  seem to be home",
+      "type": "words"
+    },
+    {
+      "text": "Fm         C#       Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "Hello from the outside",
+      "type": "words"
+    },
+    {
+      "text": "Fm              C#           Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "At least I can say that I've tried",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "To tell you",
+      "type": "words"
+    },
+    {
+      "text": "C#         Ab           Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I'm sorry for breaking your heart",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "But it don't matter,",
+      "type": "words"
+    },
+    {
+      "text": "C#               Ab        Eb",
+      "type": "chords"
+    },
+    {
+      "text": "It clearly   doesn't tear you apart",
+      "type": "words"
+    },
+    {
+      "text": "Fm   Ab Eb C#",
+      "type": "chords"
+    },
+    {
+      "text": "Anymore",
+      "type": "chords"
+    },
+    {
+      "text": "Fm     Ab     Eb       C#",
+      "type": "chords"
+    },
+    {
+      "text": "Hello,    how are you?",
+      "type": "words"
+    },
+    {
+      "text": "Fm         Ab          Eb",
+      "type": "chords"
+    },
+    {
+      "text": "It's so typical of me to talk about myself",
+      "type": "words"
+    },
+    {
+      "text": "C#",
+      "type": "chords"
+    },
+    {
+      "text": "I'm sorry",
+      "type": "words"
+    },
+    {
+      "text": "Fm   Ab              Eb   C#",
+      "type": "chords"
+    },
+    {
+      "text": "I hope     that you're well",
+      "type": "words"
+    },
+    {
+      "text": "Fm           Ab",
+      "type": "chords"
+    },
+    {
+      "text": "Did you ever make it out",
+      "type": "words"
+    },
+    {
+      "text": "Eb           C#",
+      "type": "chords"
+    },
+    {
+      "text": "Of that town where nothing ever happened?",
+      "type": "words"
+    },
+    {
+      "text": "Fm Eb             Cm      C#",
+      "type": "chords"
+    },
+    {
+      "text": "It's no secret   that the both of us",
+      "type": "words"
+    },
+    {
+      "text": "Fm      Eb     C#",
+      "type": "chords"
+    },
+    {
+      "text": "Are running out of time",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#      Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "So hello from the other side",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#            Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I must've called a thousand times",
+      "type": "words"
+    },
+    {
+      "text": "Fm    C#",
+      "type": "chords"
+    },
+    {
+      "text": "To tell you  I'm sorry",
+      "type": "words"
+    },
+    {
+      "text": "Ab              Eb",
+      "type": "chords"
+    },
+    {
+      "text": "For everything that I've done",
+      "type": "words"
+    },
+    {
+      "text": "Fm       C#     Ab         Eb",
+      "type": "chords"
+    },
+    {
+      "text": "But when I call you never  seem to be home",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#       Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "Hello from the outside",
+      "type": "words"
+    },
+    {
+      "text": "Fm              C#           Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "At least I can say that I've tried",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "To tell you",
+      "type": "words"
+    },
+    {
+      "text": "C#         Ab           Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I'm sorry for breaking your heart",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "But it don't matter,",
+      "type": "words"
+    },
+    {
+      "text": "C#               Ab        Eb",
+      "type": "chords"
+    },
+    {
+      "text": "It clearly   doesn't tear you apart",
+      "type": "words"
+    },
+    {
+      "text": "Fm      C#  Eb   Ab",
+      "type": "chords"
+    },
+    {
+      "text": "Anymore oh     ooooohh",
+      "type": "words"
+    },
+    {
+      "text": "Fm      C#  Eb   Ab",
+      "type": "chords"
+    },
+    {
+      "text": "Anymore oh     ooooohh",
+      "type": "words"
+    },
+    {
+      "text": "Fm      C#  Eb   Ab",
+      "type": "chords"
+    },
+    {
+      "text": "Anymore oh     ooooohh",
+      "type": "words"
+    },
+    {
+      "text": "Fm         C#      Eb",
+      "type": "chords"
+    },
+    {
+      "text": "Anymore ohhhh,     anymore",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#      Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "Hello from the other side",
+      "type": "words"
+    },
+    {
+      "text": "Fm             C#            Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I must've called a thousand times",
+      "type": "words"
+    },
+    {
+      "text": "Fm    C#",
+      "type": "chords"
+    },
+    {
+      "text": "To tell you  I'm sorry",
+      "type": "words"
+    },
+    {
+      "text": "Ab              Eb",
+      "type": "chords"
+    },
+    {
+      "text": "For everything that I've done",
+      "type": "words"
+    },
+    {
+      "text": "Fm       C#     Ab         Eb",
+      "type": "chords"
+    },
+    {
+      "text": "But when I call you never  seem to be home",
+      "type": "words"
+    },
+    {
+      "text": "Fm         C#       Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "Hello from the outside",
+      "type": "words"
+    },
+    {
+      "text": "Fm              C#           Ab   Eb",
+      "type": "chords"
+    },
+    {
+      "text": "At least I can say that I've tried",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "To tell you",
+      "type": "words"
+    },
+    {
+      "text": "C#         Ab           Eb",
+      "type": "chords"
+    },
+    {
+      "text": "I'm sorry for breaking your heart",
+      "type": "words"
+    },
+    {
+      "text": "Fm",
+      "type": "chords"
+    },
+    {
+      "text": "But it don't matter,",
+      "type": "words"
+    },
+    {
+      "text": "C#               Ab        Eb",
+      "type": "chords"
+    },
+    {
+      "text": "It clearly   doesn't tear you apart",
+      "type": "words"
+    },
+    {
+      "text": "Fm   Ab Eb C# Fm",
+      "type": "chords"
+    },
+    {
+      "text": "Anymore",
+      "type": "chords"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "Fm C# Fm Fm x4",
+      "type": "chords"
+    },
+    {
+      "text": "Bridge:",
+      "type": "words"
+    },
+    {
+      "text": "Fm C# Fm Fm x4",
+      "type": "chords"
+    },
+    {
+      "text": "Ending:",
+      "type": "words"
+    },
+    {
+      "text": "Fm Fm Fm C# x4",
+      "type": "chords"
+    }
+  ]
+}

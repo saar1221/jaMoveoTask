@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect";
 import Button from "../components/ui/Button";
 import HeaderForm from "../components/HeaderForm";
 import Logo from "../components/ui/Logo";
@@ -8,6 +7,7 @@ import FooterForm from "../components/FooterForm";
 import styles from "../style/LoginAndSignup.module.css";
 import { useSignupAuth } from "../hooks/useSignupAuth";
 import FormInput from "../components/FormInput";
+import toast from "react-hot-toast";
 
 const instruments = [
   "drums",
@@ -52,7 +52,10 @@ const Signup = () => {
         role,
       });
     } catch (err) {
-      console.error(err.message);
+      toast.error(err.message);
+      toast(err, {
+        duration: 6000,
+      });
     } finally {
       setIsLoading(false);
     }
@@ -106,7 +109,7 @@ const Signup = () => {
         <FooterForm text="Already have an account? " path="login" />
       </form>
 
-      {!isMobile && <Image name="register" />}
+      <Image name="register" />
     </main>
   );
 };

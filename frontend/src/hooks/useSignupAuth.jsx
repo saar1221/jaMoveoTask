@@ -12,7 +12,6 @@ export function useSignupAuth() {
 
   const navigate = useNavigate();
   useEffect(() => {
-    console.log("useSignupAuth");
     if (token && user?.role) {
       if (user.role === "admin") {
         navigate("/main/admin");

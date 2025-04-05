@@ -10,44 +10,12 @@ const LivePage = () => {
   const location = useLocation();
   const songDetails = location.state?.songDetails;
 
-  // useEffect(() => {
-  //   console.log(song, "songsongsongsong");
-  //   async function fetchSong() {
-  //     const fetch = await getSong(songDetails);
-  //     console.log(fetch, "fetch");
-  //     // setSongData(fetch);
-  //   }
-  //   // if (song) return;
-  //   fetchSong();
-  //   // return () => {
-  //   //   setSong(null);
-  //   // };
-  // }, [song, songDetails, getSong, setSong]);
-  // // }, [songDetails]);
-
   useEffect(() => {
     async function fetchSong() {
-      const fetched = await getSong(songDetails);
-      console.log(fetched, "fetch");
+      await getSong(songDetails);
     }
     fetchSong();
   }, [songDetails]);
-
-  // const scrollToBottom = () => {
-  //   if (autoScroll) {
-  //     const scrollHeight = document.documentElement.scrollHeight;
-  //     window.scrollTo(0, scrollHeight);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (autoScroll) {
-  //     const intervalId = setInterval(scrollToBottom, 100);
-  //     return () => clearInterval(intervalId);
-  //   }
-  // }, [autoScroll]);
-
-  // if (!song) return null;
 
   return (
     <div className="p-4 flex flex-col items-center">

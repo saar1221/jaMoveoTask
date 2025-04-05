@@ -1,4 +1,9 @@
 import styles from "../../style/Image.module.css";
+import { isMobile } from "react-device-detect";
 export default function Image({ name = "" }) {
-  return <img className={styles.img} src={`/${name}.png`} alt="some-guys" />;
+  return (
+    !isMobile && (
+      <img className={styles.img} src={`/${name}.png`} alt="some-guys" />
+    )
+  );
 }

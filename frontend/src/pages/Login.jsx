@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect";
 import Image from "../components/ui/Image";
 import Button from "../components/ui/Button";
 import HeaderForm from "../components/HeaderForm";
@@ -8,7 +7,7 @@ import FooterForm from "../components/FooterForm";
 import styles from "../style/LoginAndSignup.module.css";
 import { useLoginAuth } from "../hooks/useLoginAuth";
 import FormInput from "../components/FormInput";
-
+import toast from "react-hot-toast";
 const Login = () => {
   const {
     username,
@@ -28,7 +27,7 @@ const Login = () => {
     try {
       await login({ username, password });
     } catch (err) {
-      console.error(err.message);
+      toast.error(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -63,7 +62,7 @@ const Login = () => {
         <FooterForm text="Don’t have an account?" path="signup" />
       </form>
 
-      {!isMobile && <Image name="register" />}
+      <Image name="register" />
     </main>
   );
 };

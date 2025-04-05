@@ -25,7 +25,6 @@ class SocketIoService {
 
       socket.on("sessionStart", ({ sessionId, song }) => {
         console.log("Session start:", sessionId);
-        console.log("Session start:", userId, role);
         this.#broadcastStartSession({ sessionId, song });
       });
 
@@ -42,34 +41,14 @@ class SocketIoService {
       });
     });
   }
-  // socket.on("join-room", (room, userName, cb) => {
-  //   console.log(`${userName} joined room: ${room}`);
-  //   socket.join(room);
-  //   cb();
-  // });
-
-  // socket.on("message", data => {
-  //   this.#sendMessage(data, socket);
-  // });
 
   #broadcastStartSession(sessionData) {
-    console.log(sessionData, "broadcastSongSelection");
     this.#socketIoServer.emit("sessionStart", sessionData);
   }
 
   #broadcastSessionEnd(sessionData) {
     this.#socketIoServer.emit("sessionEnd", sessionData);
   }
-
-  // #sendMessage(data, socket) {
-  //   if (data.room === "") {
-  //     socket.broadcast.emit("message", `#${data.userName}: ${data.message}`);
-  //   } else {
-  //     socket
-  //       .to(data.room)
-  //       .emit("message", `#${data.userName}: ${data.message}`);
-  //   }
-  // }
 }
 
 function initSocketIoService() {

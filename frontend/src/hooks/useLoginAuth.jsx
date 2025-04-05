@@ -11,11 +11,7 @@ export function useLoginAuth() {
 
   useEffect(() => {
     if (token && user?.role) {
-      if (user.role === "admin") {
-        navigate("/main/admin");
-      } else {
-        navigate("/main/player");
-      }
+      navigate(`/main/${user.role === "admin" ? "admin" : "player"}`);
     }
   }, [token, user, navigate]);
   return {

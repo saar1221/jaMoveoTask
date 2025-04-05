@@ -3,6 +3,10 @@ import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
 import { useNavigate } from "react-router";
 
+const { MODE, VITE_SOCKET_URL } = import.meta.env;
+const SOCKET_URL =
+  MODE === "development" ? "http://localhost:4000/" : VITE_SOCKET_URL;
+
 export const SocketContext = createContext();
 
 const SocketContextProvider = ({ children }) => {
@@ -14,7 +18,7 @@ const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (user && !socket) {
-      const socketInstance = io("http://localhost:4000", {
+      const socketInstance = io(SOCKET_URL, {
         query: { userId: user.id, role: user.role },
       });
 
@@ -24,14 +28,13 @@ const SocketContextProvider = ({ children }) => {
       });
 
       socketInstance.on("sessionStart", ({ song }) => {
-        console.log("Session started: time", new Date().toLocaleTimeString());
+        console.log("Session Started");
         setSessionActive(true);
         setSessionData(song);
-        console.log("Session started:", { sessionId: user.id, song });
       });
 
       socketInstance.on("sessionEnd", () => {
-        console.log("sessionEnd");
+        console.log("Session End");
         setSessionActive(false);
         setSessionData(null);
 
