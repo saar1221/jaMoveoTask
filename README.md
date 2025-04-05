@@ -44,6 +44,7 @@ You can try the deployed version here:
 
 - **Authentication System**
   - User registration and login with role-based access (Admin or Musician(player)).
+  - Secure user registration and login with `token-based` authentication.
 
 - **Real-time Rehearsal Syncing**
   - Built using `Socket.IO` with a **Singleton architecture** to maintain a single, shared instance across the application.
