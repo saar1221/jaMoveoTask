@@ -14,7 +14,7 @@ export function useSong() {
     setLoading(true);
     try {
       const response = await apiRequest({
-        url: `/songs/getSong/?songName=${songData.song}`,
+        url: `/songs/getSong/?songName=${songData.nameId}`,
         method: "GET",
       });
       setSong(response.lyrics);
