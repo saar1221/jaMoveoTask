@@ -34,7 +34,7 @@ You can try the deployed version here:
 
 ---
 
-9. All connected `Players` will be redirected to the **Live Page**, where they will see the synchronized lyrics and chords.
+9. All connected `Players` and `Admin` will be redirected to the **Live Page**, where they will see the synchronized lyrics and chords.
 10. Each musician can now rehearse their part in real-time — whether singing or playing an instrument — based on the content selected by the admin.
 
 ---
@@ -43,7 +43,7 @@ You can try the deployed version here:
 ## 🚀 Features
 
 - **Authentication System**
-  - User registration and login with role-based access (Admin or Musician).
+  - User registration and login with role-based access (Admin or Musician(player)).
 
 - **Real-time Rehearsal Syncing**
   - Built using `Socket.IO` with a **Singleton architecture** to maintain a single, shared instance across the application.
@@ -75,6 +75,8 @@ You can try the deployed version here:
 - Tailwind CSS
 - Axios
 - Socket.IO-client
+- React Device Detect
+- Toast Message
 
 ### Backend
 - Node.js (v20.12.2 or higher required)
@@ -97,5 +99,5 @@ You can try the deployed version here:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/moveo-band-app.git
-cd moveo-band-app
+git clone https://github.com/saar1221/jaMoveoTask.git
+cd JaMoveoTask
