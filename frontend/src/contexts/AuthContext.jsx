@@ -4,10 +4,6 @@ import toast from "react-hot-toast";
 
 const AuthContext = createContext();
 
-// const initialState = {
-//   user: JSON.parse(localStorage.getItem("user")) || null,
-//   token: localStorage.getItem("token") || null,
-// };
 const initialState = {
   user: null,
   token: null,
@@ -17,13 +13,9 @@ function reducer(_state, action) {
   switch (action.type) {
     case "set-user": {
       const { token, user } = action.payload;
-      // localStorage.setItem("user", JSON.stringify(user));
-      // localStorage.setItem("token", token);
       return { user, token };
     }
     case "logout":
-      // localStorage.removeItem("user");
-      // localStorage.removeItem("token");
       return initialState;
     default:
       throw new Error("Unknown action");

@@ -25,7 +25,6 @@ class SocketIoService {
 
       socket.on("sessionStart", ({ sessionId, song }) => {
         console.log("Session start:", sessionId);
-        console.log("Session start:", userId, role);
         this.#broadcastStartSession({ sessionId, song });
       });
 
@@ -44,7 +43,6 @@ class SocketIoService {
   }
 
   #broadcastStartSession(sessionData) {
-    console.log(sessionData, "broadcastSongSelection");
     this.#socketIoServer.emit("sessionStart", sessionData);
   }
 

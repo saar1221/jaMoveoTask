@@ -1,8 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import AppLayout from "./layouts/AppLayout";
-import { AuthProvider } from "./contexts/AuthContext";
-import { SocketContextProvider } from "./contexts/SocketContext";
-
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import ProtectedRoute from "./routes/ProtectedRoute";
