@@ -11,7 +11,7 @@ import { SocketIoService } from "./services/index.js";
 dotenv.config();
 const origin = process.env.NODE_ENV === "DEV" ? "*" : process.env.CLIENT_URL;
 const defaultCorsOptions = {
-  origin: [origin],
+  origin: origin,
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
