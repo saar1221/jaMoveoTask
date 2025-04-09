@@ -16,7 +16,7 @@ const defaultCorsOptions = {
   origin: origin,
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: isDev ? true : true, // אפשר גם להשאיר תמיד true אם אתה תמיד שולח withCredentials
+  credentials: isDev ? true : true,
 };
 
 const app = express();
