@@ -9,9 +9,9 @@ import router from "./routes/index.js";
 import { SocketIoService } from "./services/index.js";
 
 dotenv.config();
-
+const origin = process.env.NODE_ENV === "DEV" ? "*" : process.env.CLIENT_URL;
 const defaultCorsOptions = {
-  origin: "*",
+  origin: [origin],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
@@ -25,8 +25,8 @@ connectDB();
 SocketIoService.init(io);
 
 app.use(helmet());
-
 app.use(express.json());
+
 app.use(router);
 
 const PORT = process.env.SERVER_PORT || 4001;

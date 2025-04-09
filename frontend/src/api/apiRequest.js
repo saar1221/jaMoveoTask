@@ -24,7 +24,7 @@ apiClient.interceptors.request.use(
     return config;
   },
   error => {
-    return Promise.reject(error);
+    return Promise.reject(error); // Handle refresh token here
   }
 );
 const apiRequest = async ({ method, url, data = {}, params = {} }) => {

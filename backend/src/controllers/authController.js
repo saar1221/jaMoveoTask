@@ -27,7 +27,6 @@ export const loginUser = async (req, res, _next) => {
   }
 
   const { user, token } = await findUser({ username, password });
-  console.log(user, token, "user, token");
 
   res.json({ user, token });
 };

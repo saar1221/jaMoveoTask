@@ -13,11 +13,7 @@ export function useSignupAuth() {
   const navigate = useNavigate();
   useEffect(() => {
     if (token && user?.role) {
-      if (user.role === "admin") {
-        navigate("/main/admin");
-      } else {
-        navigate("/main/player");
-      }
+      navigate(`/main/${user.role === "admin" ? "admin" : "player"}`);
     }
   }, [user, navigate, token]);
   return {
