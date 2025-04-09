@@ -9,11 +9,14 @@ import router from "./routes/index.js";
 import { SocketIoService } from "./services/index.js";
 
 dotenv.config();
-const origin = process.env.NODE_ENV === "DEV" ? "*" : process.env.CLIENT_URL;
+const isDev = process.env.NODE_ENV === "DEV";
+const origin = isDev ? "*" : process.env.CLIENT_URL;
+
 const defaultCorsOptions = {
   origin: origin,
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: isDev ? true : true, // אפשר גם להשאיר תמיד true אם אתה תמיד שולח withCredentials
 };
 
 const app = express();
